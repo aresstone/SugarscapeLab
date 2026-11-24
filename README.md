@@ -21,7 +21,7 @@ There are three ways to use it, from the simplest:
 2. **The interface starts on any computer with one command** (see "Start the app" below). It is an
    extra: a web page that runs the same Python files, adds no rules of its own, and shows the world
    running, every required run and an explanation of the code.
-3. **A hosted copy can be tried without installing anything.**
+3. **A hosted copy can be tried without installing anything,** at <https://sugarscape-lab.vercel.app>.
 
 ## Start the app
 

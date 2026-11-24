@@ -23,3 +23,7 @@ analyse_results.py   reads those CSV files and writes the results and figures fo
 
 Running them again gives exactly the same files, because every simulation uses a fixed seed.
 data/README.txt explains the columns of the CSV files.
+
+An interface to the same files
+A small web interface that runs these same three files is online at https://sugarscape-lab.vercel.app
+It is an extra and is not needed to run them.
