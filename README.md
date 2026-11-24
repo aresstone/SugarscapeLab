@@ -6,7 +6,7 @@ File:       README.md
 Purpose:    What the project is, the three ways to use it, how to start the app, how to run the
             simulations from a terminal, what to do if a step fails, and where everything lives.
 -->
-
+ 
 # Sugarscape Lab
 
 A Sugarscape simulation for the module 6COM2012 Social and Collective Artificial Intelligence: a grid
