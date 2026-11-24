@@ -1,0 +1,11 @@
+run,title,compared_with,final_population,last50_population,last50_mean_sugar,last50_gini,total_births,deaths_starved,deaths_old_age,seeds_population_last50_mean,seeds_population_last50_lowest,seeds_population_last50_highest,seeds_gini_last50_mean
+01_base_100,"Base, 100 agents",,59,59.72,266.9868,0.3454,0,41,0,60.544,56,63,0.3281
+02_base_500,"Base, 500 agents",,215,215.46,204.7572,0.3356,0,285,0,221.92,215.46,228.56,0.3213
+03_scenario1_regrowth_slow,Slow regrowth (0.25),02_base_500,146,146.12,122.3219,0.3331,0,354,0,148.704,143,152,0.3168
+04_scenario1_regrowth_fast,Fast regrowth (4),02_base_500,271,271,182.8893,0.4819,0,229,0,283,271,290,0.4763
+05_scenario2_no_regrow_patches,500 patches never regrow,02_base_500,191,191,192.951,0.295,0,309,0,203.204,191,214,0.3124
+06_scenario3_vision_short,Short vision (1 to 2),02_base_500,183,183.28,201.7229,0.371,0,317,0,200.408,183.28,208.1,0.368
+07_scenario3_vision_long,Long vision (7 to 12),02_base_500,243,243,202.2969,0.2324,0,257,0,242.8,234,251,0.2323
+08_modification_lifespan,Lifespan,01_base_100,0,0,0,0,0,39,61,0,0,0,0
+09_modification_reproduction,Reproduction,01_base_100,1265,1221.82,36.0194,0.1154,1271,106,0,1210.864,1195.84,1229.5,0.1172
+10_modification_lifespan_reproduction,Lifespan and reproduction,01_base_100,880,861.44,35.7735,0.114,1967,52,1135,867.284,861.44,872,0.1128

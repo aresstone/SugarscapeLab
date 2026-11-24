@@ -1,0 +1,2 @@
+# The extra package analyse_results.py needs to draw the figures. Installed by start.sh and start.bat.
+matplotlib

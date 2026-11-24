@@ -1,0 +1,15 @@
+# Name:       Nikita Devi Gurumayum
+# Student ID: SCSJ2400109
+# Module:     6COM2012 Social and Collective Artificial Intelligence
+# File:       .vercelignore
+# Purpose:    Keeps what the hosted copy does not need out of the upload to Vercel: installed packages,
+#             Python environments and caches. The built web app (web/dist) and the data stay in.
+
+web/node_modules
+.venv
+venv
+**/__pycache__
+**/*.pyc
+.git
+.vercel
+.DS_Store

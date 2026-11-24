@@ -1,0 +1,25 @@
+How to run these files
+
+You need Python 3.9 or newer. run_simulations.py needs nothing else.
+analyse_results.py also needs matplotlib.
+
+On Windows
+1. Open this folder in File Explorer, click the address bar, type cmd and press Enter.
+2. python run_simulations.py
+3. python -m pip install matplotlib        (only the first time)
+4. python analyse_results.py
+If "python" is not found, type "py" in its place.
+
+On a Mac
+1. Open the Terminal app, type "cd " (with a space), drag this folder onto the window and press Enter.
+2. python3 run_simulations.py
+3. python3 -m pip install matplotlib       (only the first time)
+4. python3 analyse_results.py
+
+What the files do
+sugarscape.py        the model: the Agent and Sugarscape classes. It is not run directly.
+run_simulations.py   runs every simulation (under a minute) and writes the CSV files into the data folder.
+analyse_results.py   reads those CSV files and writes the results and figures folders.
+
+Running them again gives exactly the same files, because every simulation uses a fixed seed.
+data/README.txt explains the columns of the CSV files.

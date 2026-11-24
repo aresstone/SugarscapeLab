@@ -1,0 +1,297 @@
+{
+  "01_base_100": {
+    "title": "Base, 100 agents",
+    "steps": 500,
+    "settings": {},
+    "compare_with": null,
+    "reference_seed": 201,
+    "start_population": 100,
+    "lowest_population": 52,
+    "highest_population": 100,
+    "total_births": 0,
+    "deaths_starved": 48,
+    "deaths_old_age": 0,
+    "extinction_step": null,
+    "final_population": 52,
+    "last50_population": 52,
+    "final_mean_sugar": 885.0769,
+    "last50_mean_sugar": 841.8104,
+    "final_median_sugar": 914,
+    "last50_median_sugar": 869.77,
+    "final_gini": 0.2739,
+    "last50_gini": 0.2745,
+    "final_sugar_on_grid": 3400,
+    "last50_sugar_on_grid": 3401.94,
+    "final_share_on_rich_cells": 0.9808,
+    "last50_share_on_rich_cells": 0.9808,
+    "start_mean_vision": 3.5,
+    "final_mean_vision": 3.8846,
+    "start_mean_metabolism": 2.58,
+    "final_mean_metabolism": 1.7692,
+    "founders_alive_final": 52,
+    "final_share_poor": 0.1923,
+    "final_share_middle": 0.8077,
+    "final_share_rich": 0,
+    "final_largest_lineage_share": 0.0192,
+    "final_top5_lineage_share": 0.0962,
+    "across_seeds": {
+      "final_population": {
+        "mean": 55.6,
+        "lowest": 52,
+        "highest": 60
+      },
+      "population_last50": {
+        "mean": 55.6,
+        "lowest": 52,
+        "highest": 60
+      },
+      "mean_sugar_last50": {
+        "mean": 716.2386,
+        "lowest": 655.0589,
+        "highest": 841.8104
+      },
+      "gini_last50": {
+        "mean": 0.3375,
+        "lowest": 0.2745,
+        "highest": 0.3807
+      },
+      "total_births": {
+        "mean": 0,
+        "lowest": 0,
+        "highest": 0
+      },
+      "deaths_starved": {
+        "mean": 44.4,
+        "lowest": 40,
+        "highest": 48
+      },
+      "deaths_old_age": {
+        "mean": 0,
+        "lowest": 0,
+        "highest": 0
+      },
+      "mean_vision_final": {
+        "mean": 3.7819,
+        "lowest": 3.6379,
+        "highest": 3.8846
+      },
+      "mean_metabolism_final": {
+        "mean": 1.939,
+        "lowest": 1.7692,
+        "highest": 2.0333
+      },
+      "founders_alive_final": {
+        "mean": 55.6,
+        "lowest": 52,
+        "highest": 60
+      }
+    }
+  },
+  "02_reproduction_death": {
+    "title": "Reproduction and death",
+    "steps": 500,
+    "settings": {
+      "lifespan": true,
+      "reproduction": true
+    },
+    "compare_with": "01_base_100",
+    "reference_seed": 201,
+    "start_population": 100,
+    "lowest_population": 76,
+    "highest_population": 951,
+    "total_births": 5248,
+    "deaths_starved": 59,
+    "deaths_old_age": 4396,
+    "extinction_step": null,
+    "final_population": 893,
+    "last50_population": 880.26,
+    "final_mean_sugar": 35.6305,
+    "last50_mean_sugar": 35.687,
+    "final_median_sugar": 35,
+    "last50_median_sugar": 35.03,
+    "final_gini": 0.1145,
+    "last50_gini": 0.1132,
+    "final_sugar_on_grid": 910,
+    "last50_sugar_on_grid": 924.06,
+    "final_share_on_rich_cells": 0.4647,
+    "last50_share_on_rich_cells": 0.4689,
+    "start_mean_vision": 3.5,
+    "final_mean_vision": 4.6025,
+    "start_mean_metabolism": 2.58,
+    "final_mean_metabolism": 1,
+    "founders_alive_final": 22,
+    "final_share_poor": 0,
+    "final_share_middle": 1,
+    "final_share_rich": 0,
+    "final_largest_lineage_share": 0.1478,
+    "final_top5_lineage_share": 0.4647,
+    "across_seeds": {
+      "final_population": {
+        "mean": 881.6,
+        "lowest": 861,
+        "highest": 895
+      },
+      "population_last50": {
+        "mean": 878.9,
+        "lowest": 875.16,
+        "highest": 880.74
+      },
+      "mean_sugar_last50": {
+        "mean": 35.6729,
+        "lowest": 35.5123,
+        "highest": 35.7963
+      },
+      "gini_last50": {
+        "mean": 0.1137,
+        "lowest": 0.1132,
+        "highest": 0.114
+      },
+      "total_births": {
+        "mean": 5201.4,
+        "lowest": 5148,
+        "highest": 5248
+      },
+      "deaths_starved": {
+        "mean": 56.4,
+        "lowest": 52,
+        "highest": 60
+      },
+      "deaths_old_age": {
+        "mean": 4363.4,
+        "lowest": 4314,
+        "highest": 4396
+      },
+      "mean_vision_final": {
+        "mean": 5.0277,
+        "lowest": 4.6025,
+        "highest": 5.3709
+      },
+      "mean_metabolism_final": {
+        "mean": 1,
+        "lowest": 1,
+        "highest": 1
+      },
+      "founders_alive_final": {
+        "mean": 15.8,
+        "lowest": 12,
+        "highest": 22
+      }
+    },
+    "difference_from_compare_with": {
+      "final_population": 841,
+      "last50_population": 828.26,
+      "last50_mean_sugar": -806.1234,
+      "last50_gini": -0.1613,
+      "total_births": 5248,
+      "deaths_starved": 11,
+      "deaths_old_age": 4396,
+      "seeds_mean_population_last50": 823.3,
+      "seeds_mean_mean_sugar_last50": -680.5657,
+      "seeds_mean_gini_last50": -0.2238
+    }
+  },
+  "03_reproduction_death_scarce": {
+    "title": "Reproduction and death, scarce sugar",
+    "steps": 500,
+    "settings": {
+      "lifespan": true,
+      "reproduction": true,
+      "regrowth_rate": 0.5
+    },
+    "compare_with": "02_reproduction_death",
+    "reference_seed": 201,
+    "start_population": 100,
+    "lowest_population": 73,
+    "highest_population": 490,
+    "total_births": 2699,
+    "deaths_starved": 65,
+    "deaths_old_age": 2294,
+    "extinction_step": null,
+    "final_population": 440,
+    "last50_population": 449.22,
+    "final_mean_sugar": 35.7989,
+    "last50_mean_sugar": 35.5208,
+    "final_median_sugar": 35,
+    "last50_median_sugar": 34.61,
+    "final_gini": 0.1196,
+    "last50_gini": 0.1122,
+    "final_sugar_on_grid": 1163.5,
+    "last50_sugar_on_grid": 1147.36,
+    "final_share_on_rich_cells": 0.4705,
+    "last50_share_on_rich_cells": 0.4675,
+    "start_mean_vision": 3.5,
+    "final_mean_vision": 4.5227,
+    "start_mean_metabolism": 2.58,
+    "final_mean_metabolism": 1,
+    "founders_alive_final": 23,
+    "final_share_poor": 0,
+    "final_share_middle": 1,
+    "final_share_rich": 0,
+    "final_largest_lineage_share": 0.125,
+    "final_top5_lineage_share": 0.4205,
+    "across_seeds": {
+      "final_population": {
+        "mean": 450.2,
+        "lowest": 440,
+        "highest": 455
+      },
+      "population_last50": {
+        "mean": 447.136,
+        "lowest": 444.04,
+        "highest": 450.36
+      },
+      "mean_sugar_last50": {
+        "mean": 35.58,
+        "lowest": 35.5208,
+        "highest": 35.6946
+      },
+      "gini_last50": {
+        "mean": 0.1122,
+        "lowest": 0.1118,
+        "highest": 0.1127
+      },
+      "total_births": {
+        "mean": 2679,
+        "lowest": 2663,
+        "highest": 2699
+      },
+      "deaths_starved": {
+        "mean": 60.8,
+        "lowest": 55,
+        "highest": 65
+      },
+      "deaths_old_age": {
+        "mean": 2268,
+        "lowest": 2250,
+        "highest": 2294
+      },
+      "mean_vision_final": {
+        "mean": 4.8687,
+        "lowest": 4.5227,
+        "highest": 5.0945
+      },
+      "mean_metabolism_final": {
+        "mean": 1,
+        "lowest": 1,
+        "highest": 1
+      },
+      "founders_alive_final": {
+        "mean": 17.6,
+        "lowest": 15,
+        "highest": 23
+      }
+    },
+    "difference_from_compare_with": {
+      "final_population": -453,
+      "last50_population": -431.04,
+      "last50_mean_sugar": -0.1662,
+      "last50_gini": -0.001,
+      "total_births": -2549,
+      "deaths_starved": 6,
+      "deaths_old_age": -2102,
+      "seeds_mean_population_last50": -431.764,
+      "seeds_mean_mean_sugar_last50": -0.0929,
+      "seeds_mean_gini_last50": -0.0015
+    }
+  }
+}

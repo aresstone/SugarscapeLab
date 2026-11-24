@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8 12 50 50">
+  <!--
+  Name:       Nikita Devi Gurumayum
+  Student ID: SCSJ2400109
+  Module:     6COM2012 Social and Collective Artificial Intelligence
+  File:       web/public/favicon.svg
+  Purpose:    The small Sugarscape Lab icon shown in the browser tab: Sugi, the sugar cube, in the
+              "warm sugar" colours. It cannot read the palette in src/index.css, so its colours are copied from there.
+  -->
+  <defs>
+    <linearGradient id="sugar" x1="0.1" y1="0.05" x2="0.9" y2="0.95">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="0.5" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <g stroke-width="5" stroke-linejoin="round">
+    <polygon points="44,26 53,17 53,49 44,58" fill="url(#sugar)" stroke="url(#sugar)"/>
+    <polygon points="44,26 53,17 53,49 44,58" fill="#451a03" stroke="#451a03" opacity="0.22"/>
+    <polygon points="12,26 21,17 53,17 44,26" fill="url(#sugar)" stroke="url(#sugar)"/>
+    <polygon points="12,26 21,17 53,17 44,26" fill="#fff" stroke="#fff" opacity="0.4"/>
+    <polygon points="12,26 44,26 44,58 12,58" fill="url(#sugar)" stroke="url(#sugar)"/>
+  </g>
+  <ellipse cx="23" cy="39.5" rx="3.4" ry="4.1" fill="#fff"/>
+  <ellipse cx="34" cy="39.5" rx="3.4" ry="4.1" fill="#fff"/>
+  <circle cx="23" cy="40" r="2" fill="#451a03"/>
+  <circle cx="34" cy="40" r="2" fill="#451a03"/>
+  <path d="M25 46.5 Q28.5 49.8 32 46.5" fill="none" stroke="#451a03" stroke-width="2" stroke-linecap="round"/>
+</svg>

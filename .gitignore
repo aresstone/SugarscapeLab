@@ -1,0 +1,14 @@
+# Name:       Nikita Devi Gurumayum
+# Student ID: SCSJ2400109
+# Module:     6COM2012 Social and Collective Artificial Intelligence
+# File:       .gitignore
+# Purpose:    Keeps installed packages, Python environments and caches out of the repository.
+#             The built web app (web/dist) and the data are kept in, because the server needs them.
+
+web/node_modules
+.venv
+venv
+__pycache__/
+*.pyc
+.vercel
+.DS_Store

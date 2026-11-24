@@ -1,0 +1,4 @@
+run,title,compared_with,final_population,last50_population,last50_mean_sugar,last50_gini,total_births,deaths_starved,deaths_old_age,seeds_population_last50_mean,seeds_population_last50_lowest,seeds_population_last50_highest,seeds_gini_last50_mean
+01_base_100,"Base, 100 agents",,52,52,841.8104,0.2745,0,48,0,55.6,52,60,0.3375
+02_reproduction_death,Reproduction and death,01_base_100,893,880.26,35.687,0.1132,5248,59,4396,878.9,875.16,880.74,0.1137
+03_reproduction_death_scarce,"Reproduction and death, scarce sugar",02_reproduction_death,440,449.22,35.5208,0.1122,2699,65,2294,447.136,444.04,450.36,0.1122

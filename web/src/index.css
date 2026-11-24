@@ -1,0 +1,397 @@
+/*
+Name:       Nikita Devi Gurumayum
+Student ID: SCSJ2400109
+Module:     6COM2012 Social and Collective Artificial Intelligence
+File:       web/src/index.css
+Purpose:    The design tokens (colours, fonts, corner radius, shadows) for the light and dark themes,
+            the "warm sugar" gradient, the colours of the world and the charts, and the shared animations.
+*/
+
+@import "tailwindcss";
+
+/* dark: styles apply when the page has the "dark" class (set by the theme switch). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Short names used in the components, pointing at the theme colours below. */
+  --color-page: var(--background);
+  --color-card: var(--card);
+  --color-ink: var(--foreground);
+  --color-muted: var(--muted-foreground);
+  --color-line: var(--border);
+  --color-soft: var(--muted);
+  --color-action: var(--primary);
+  --color-action-dark: var(--primary-hover);
+  /* The colours of the world and of the runs are used through src/lib/colours.ts. */
+
+  --radius-card: 1.5rem;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-aurora: aurora 18s ease-in-out infinite alternate;
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+}
+
+:root {
+  /* ---- PALETTE ------------------------------------------------------------------------------
+     Every colour in the app comes from this block (and the dark-theme block below it).
+     To change the look, change these lines only. The tab icon, web/public/favicon.svg, cannot
+     read these variables, so it has its own copy of the gradient colours. */
+  /* "Warm sugar": honey to amber to caramel. */
+  --brand-1: #fbbf24; /* honey: the three stops of the brand gradient */
+  --brand-2: #f59e0b; /* amber */
+  --brand-3: #ea580c; /* caramel */
+  --brand-ink-1: #b45309; /* the same gradient, deeper, for text on the light page (honey text is too pale) */
+  --brand-ink-2: #c2410c;
+  --brand-ink-3: #9a3412;
+  --action: #b45309; /* buttons and links: dark amber, so white text on it and links on white stay readable */
+  --action-hover: #92400e;
+  --on-action: #fff; /* text on a button in the action colour */
+  --on-colour: #fff; /* light shapes drawn on top of a colour, such as the guide's eyes */
+  --on-brand: #451a03; /* text and icons drawn on the brand gradient: dark, because honey is light */
+  --guide-ink: #451a03; /* the guide's pupils and smile */
+  --scrim: rgb(16 10 4 / 0.5); /* the dimming behind the tour and the file viewer */
+
+  /* The world: sugar on a cell from 1 to 4 (0 shows the page background), and the agents. */
+  --sugar-1: #fef3c7;
+  --sugar-2: #fcd34d;
+  --sugar-3: #f59e0b;
+  --sugar-4: #b45309;
+  --agent: #1e3a8a; /* agents: a cool dark blue, apart from the warm sugar in hue and in lightness */
+  --agent-edge: #fff; /* a thin ring round each agent, so it stands out on any sugar level */
+  --agent-picked: #0ea5e9; /* the ring round the agent that was clicked */
+  --no-regrow: #57534e; /* the small mark on a patch that never regrows */
+
+  /* One colour per run, in the order of RUNS: the colours of the figures drawn by analyse_results.py
+     (a colour-blind-safe set), except runs 8 and 10, made easier to tell from run 1, which they are
+     drawn beside. Each run also keeps its line style, as in the figures. */
+  --run-1: #0072b2;
+  --run-2: #d55e00;
+  --run-3: #009e73;
+  --run-4: #e69f00;
+  --run-5: #cc79a7;
+  --run-6: #56b4e9;
+  --run-7: #000000;
+  --run-8: #999999;
+  --run-9: #8c510a;
+  --run-10: #882255;
+  --run-custom: var(--action); /* a run with settings that match no saved run */
+  /* ------------------------------------------------------------------------------------------- */
+
+  --background: oklch(0.99 0.002 286);
+  --foreground: oklch(0.235 0.005 286);
+  --card: oklch(1 0 0);
+  --muted: oklch(0.965 0.002 286);
+  --muted-foreground: oklch(0.53 0.009 286);
+  --border: oklch(0.92 0.004 286);
+  --primary: var(--action);
+  --primary-hover: var(--action-hover);
+  --ring: color-mix(in oklch, var(--action) 45%, transparent);
+  --shadow-color: 240 10% 20%;
+  /* The brand gradient, for highlights such as the guide, the step numbers and the page eyebrows. */
+  --ai-gradient: linear-gradient(110deg, var(--brand-1) 0%, var(--brand-2) 50%, var(--brand-3) 100%);
+  --ai-text-gradient: linear-gradient(110deg, var(--brand-ink-1) 0%, var(--brand-ink-2) 50%, var(--brand-ink-3) 100%);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.12 0.003 286);
+  --foreground: oklch(0.97 0.002 286);
+  --card: oklch(0.19 0.004 286);
+  --muted: oklch(0.24 0.004 286);
+  --muted-foreground: oklch(0.7 0.008 286);
+  --border: oklch(1 0 0 / 10%);
+  --ring: color-mix(in oklch, var(--action) 55%, transparent);
+  --shadow-color: 240 30% 2%;
+
+  /* Dark theme: light amber on the dark page, with dark text on buttons. */
+  --brand-ink-1: var(--brand-1);
+  --brand-ink-2: var(--brand-2);
+  --brand-ink-3: var(--brand-3);
+  --action: #f59e0b;
+  --action-hover: #fbbf24;
+  --on-action: #1c1917;
+  --scrim: rgb(0 0 0 / 0.6);
+  --sugar-1: #3a2a0c;
+  --sugar-2: #6b430b;
+  --sugar-3: #a5600a;
+  --sugar-4: #e08a0b;
+  --agent: #7dd3fc;
+  --agent-edge: #0b0b0e;
+  --agent-picked: #f5f5f4;
+  --no-regrow: #a8a29e;
+  --run-1: #3a9ad9; /* lighter versions of the darkest run colours, so they show on the dark page */
+  --run-3: #2bbf92;
+  --run-5: #d98db8;
+  --run-7: #e5e5e5;
+  --run-8: #c8c8c8;
+  --run-9: #c08a4a;
+  --run-10: #cc6699;
+}
+
+@layer base {
+  html,
+  body {
+    overflow-x: clip; /* the soft glows must never make the page scroll sideways */
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--primary) 22%, transparent);
+  }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+  /* When the tour scrolls to a part of the page, it stops below the header bar. */
+  [data-tour] {
+    scroll-margin-top: 88px;
+  }
+}
+
+/* Frosted glass, used for the header. */
+@utility glass {
+  background-color: color-mix(in oklch, var(--card) 70%, transparent);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+@utility shadow-soft {
+  box-shadow:
+    0 1px 2px hsl(var(--shadow-color) / 0.05),
+    0 6px 18px -6px hsl(var(--shadow-color) / 0.08),
+    0 24px 48px -24px hsl(var(--shadow-color) / 0.12);
+}
+
+@utility shadow-lift {
+  box-shadow:
+    0 2px 4px hsl(var(--shadow-color) / 0.05),
+    0 12px 28px -8px hsl(var(--shadow-color) / 0.14),
+    0 40px 80px -32px hsl(var(--shadow-color) / 0.22);
+}
+
+/* Text painted with the gradient, which drifts slowly from one end to the other. */
+@utility text-ai {
+  background-image: var(--ai-text-gradient);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: ai-pan 6s ease-in-out infinite alternate;
+}
+
+@utility bg-ai {
+  background-image: var(--ai-gradient);
+}
+
+/* The angle of the spinning ring in .ai-glow. */
+@property --ai-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@layer components {
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    box-shadow:
+      0 1px 2px hsl(var(--shadow-color) / 0.05),
+      0 6px 18px -6px hsl(var(--shadow-color) / 0.08),
+      0 24px 48px -24px hsl(var(--shadow-color) / 0.12);
+  }
+
+  /* A spinning ring in the gradient colours with a soft glow, for the part that matters most. */
+  .ai-glow {
+    position: relative;
+    isolation: isolate;
+  }
+  .ai-glow::before,
+  .ai-glow::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    background: conic-gradient(
+      from var(--ai-angle),
+      var(--brand-1),
+      var(--brand-2),
+      var(--brand-3),
+      var(--brand-1)
+    );
+    animation: ai-spin 5s linear infinite;
+    pointer-events: none;
+  }
+  /* The outer corners are made rounder by the padding, so the inner edge matches the box's corners. */
+  .ai-glow::before {
+    border-radius: calc(var(--glow-radius, var(--radius-card)) + 1.5px);
+    inset: -1.5px;
+    padding: 1.5px;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+  }
+  .ai-glow::after {
+    border-radius: calc(var(--glow-radius, var(--radius-card)) + 32px);
+    inset: -32px;
+    padding: 32px;
+    background-clip: content-box;
+    filter: blur(22px);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: var(--ai-glow-strength, 0.32);
+    z-index: -1;
+  }
+  .ai-glow-soft {
+    --ai-glow-strength: 0.14;
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(color-mix(in oklch, var(--foreground) 9%, transparent) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+
+  /* Content that fades, un-blurs and rises into place when it scrolls into view (see FadeIn.tsx). */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(6px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .fade-in[data-shown] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background: var(--primary);
+    color: var(--on-action);
+    padding: 0.5rem 1.1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 6px 16px -8px color-mix(in oklch, var(--primary) 70%, transparent);
+  }
+  .btn-primary:hover {
+    background: var(--primary-hover);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--foreground);
+    padding: 0.5rem 1.1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .btn-secondary:hover {
+    background: var(--muted);
+  }
+
+  .btn-primary:disabled,
+  .btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@keyframes ai-spin {
+  to {
+    --ai-angle: 360deg;
+  }
+}
+@keyframes ai-pan {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes aurora {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(6%, -4%, 0) scale(1.08); }
+  100% { transform: translate3d(-5%, 5%, 0) scale(0.96); }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+/* The tour guide's movements (components/tour/Guide.tsx). */
+.guide-float {
+  animation: guide-float 3.2s ease-in-out infinite;
+}
+.guide-hop {
+  animation: guide-hop 0.5s ease-out;
+}
+.guide-cheer {
+  animation: guide-cheer 1.1s ease-out;
+}
+.guide-eyes,
+.guide-pupils,
+.guide-sparkle {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.guide-eyes {
+  transition: transform 70ms;
+}
+.guide-pupils {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.guide-sparkle {
+  animation: guide-twinkle 3.6s ease-in-out infinite;
+}
+@keyframes guide-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes guide-hop {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-9px) scale(1.06); }
+}
+@keyframes guide-cheer {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-18px) rotate(-10deg); }
+  50% { transform: translateY(0) rotate(10deg); }
+  75% { transform: translateY(-8px) rotate(-4deg); }
+}
+@keyframes guide-twinkle {
+  0%, 70%, 100% { transform: scale(0.6) rotate(0deg); opacity: 0.4; }
+  85% { transform: scale(1.1) rotate(45deg); opacity: 1; }
+}
+
+/* People who ask their computer for less motion get none: everything shows at once, nothing moves. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
