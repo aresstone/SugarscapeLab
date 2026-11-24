@@ -26,4 +26,5 @@ data/README.txt explains the columns of the CSV files.
 
 An interface to the same files
 A small web interface that runs these same three files is online at https://sugarscape-lab.vercel.app
-It is an extra and is not needed to run them.
+It is an extra and is not needed to run them. Its code is submitted separately,
+in the folder named "4 - Extra - Web interface (Sugarscape Lab)".
