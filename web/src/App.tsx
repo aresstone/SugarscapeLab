@@ -6,6 +6,7 @@
 //             It also makes the file viewer, the current simulation run and the guided tour available
 //             everywhere.
 
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { FileViewerProvider } from "./components/FileViewer";
 import Aurora from "./components/motion/Aurora";
@@ -44,6 +45,7 @@ export default function App() {
             <main key={page} className="mx-auto max-w-6xl px-5 pb-24">
               {pageFor(page)}
             </main>
+            <Footer />
           </div>
         </TourProvider>
       </RunProvider>
